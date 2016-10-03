@@ -20,7 +20,7 @@ public class QuickSort implements Sort {
     private static int partition(int[] a, int p, int r) {
         int pivot = a[p];
         int s = p + 1, e = r;
-        while (e >= p && s <= r) {
+        while (true) {
             while (s <= r && a[s] <= pivot) {
                 s++;
             }
