@@ -3,6 +3,7 @@ package sorting;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import static org.testng.Assert.*;
@@ -12,7 +13,7 @@ import static org.testng.Assert.*;
  * @version 02-10-2016
  */
 public class SortTest {
-    private static final int SIZE = 50_00_000;
+    private static final int SIZE = 10;
     private static final int P = SIZE / 10;
     private static final int R = P * 5;
     private Sort sort;
@@ -58,7 +59,9 @@ public class SortTest {
     @Test
     public void testSort() throws Exception {
         System.out.println("Starting sorting (full).");
+        System.out.println(Arrays.toString(a));
         sort.sort(a);
+        System.out.println(Arrays.toString(a));
         System.out.println("Sorting complete. (full).");
         System.out.println("Starting sorting (partial).");
         sort.sort(b, P, R);
